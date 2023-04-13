@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="QQStepView">
+
+        <attr name="outColor" format="color" />
+        <attr name="inColor" format="color" />
+        <attr name="bordeWidth" format="dimension" />
+        <attr name="qqTextSize" format="dimension" />
+        <attr name="qqTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ColorTrackTextView">
+        <attr name="originColor" format="color" />
+        <attr name="changeColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressBar">
+        <attr name="innerBackground" format="color" />
+        <attr name="outBackground" format="color" />
+        <attr name="rounderWidth" format="dimension" />
+        <attr name="progressTextSize" format="dimension" />
+        <attr name="progressTextColor" format="color" />
+    </declare-styleable>
+    
+    <declare-styleable name="RatingBar">
+        <attr name="inStart" format= "reference"/>
+        <attr name="outStart" format="reference"/>
+        <attr name="startNum" format="integer"/>
+    </declare-styleable>
+</resources>

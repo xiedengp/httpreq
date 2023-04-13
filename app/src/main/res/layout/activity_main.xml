@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!--    <include layout="@layout/content_main" />-->
+
+    <com.example.myapp.uiview.MyChronometer
+        android:id="@+id/chronometer"
+        android:layout_marginLeft="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <com.example.myapp.uiview.QQStepView
+        android:id="@+id/step"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="100dp"
+        app:bordeWidth="10dp"
+        app:inColor="#EA1E57"
+        app:outColor="#3843EA"
+        app:qqTextColor="@color/black"
+        app:qqTextSize="15sp" />
+    <Button
+        android:id="@+id/recycler_view"
+        android:layout_margin="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="recyclerView"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/flow"
+        app:layout_constraintTop_toTopOf="@id/recycler_view"
+        app:layout_constraintStart_toEndOf="@id/recycler_view"
+        android:text="flow"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.example.myapp.uiview.ColorTrackTextView
+        android:id="@+id/track_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:text="123456"
+        app:changeColor="@color/teal_200"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/leftToRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="左到右"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/track_text" />
+
+    <Button
+        android:id="@+id/rightToLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="右到左"
+        app:layout_constraintLeft_toRightOf="@id/leftToRight"
+        app:layout_constraintTop_toBottomOf="@id/track_text" />
+
+    <Button
+        android:id="@+id/go_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="密码"
+        app:layout_constraintLeft_toRightOf="@id/rightToLeft"
+        app:layout_constraintTop_toBottomOf="@id/track_text" />
+
+    <Button
+        android:id="@+id/drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="drawer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/go_activity" />
+
+    <Button
+        android:id="@+id/behavior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="behavior"
+        app:layout_constraintStart_toEndOf="@id/drawer"
+        app:layout_constraintTop_toBottomOf="@id/go_activity" />
+
+    <Button
+        android:id="@+id/list_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="listScreen"
+        app:layout_constraintStart_toEndOf="@id/behavior"
+        app:layout_constraintTop_toBottomOf="@id/go_activity" />
+
+    <Button
+        android:id="@+id/point_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="pointLoad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_screen" />
+
+    <Button
+        android:id="@+id/bessel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="贝塞尔"
+        app:layout_constraintStart_toEndOf="@+id/point_load"
+        app:layout_constraintTop_toBottomOf="@id/list_screen" />
+
+    <Button
+        android:id="@+id/list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="viewShow"
+        app:layout_constraintStart_toEndOf="@+id/bessel"
+        app:layout_constraintTop_toBottomOf="@id/list_screen" />
+
+    <Button
+        android:id="@+id/bezier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="bezier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_view" />
+
+    <Button
+        android:id="@+id/love"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="love"
+        app:layout_constraintStart_toEndOf="@+id/bezier"
+        app:layout_constraintTop_toBottomOf="@id/list_view" />
+    <Button
+        android:id="@+id/land"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/land"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/love"
+        app:layout_constraintTop_toBottomOf="@id/list_view" />
+
+    <Button
+        android:id="@+id/word_room"
+        android:text="word"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@id/land"
+        app:layout_constraintTop_toBottomOf="@id/list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.example.myapp.uiview.VipPayNumView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/go_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="流式"
+        app:layout_constraintBottom_toTopOf="@id/track_text"
+        app:layout_constraintLeft_toRightOf="@id/rightToLeft" />
+
+    <Button
+        android:id="@+id/go_drag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:text="drag"
+        app:layout_constraintBottom_toTopOf="@id/track_text"
+        app:layout_constraintRight_toLeftOf="@id/go_tag" />
+
+    <Button
+        android:id="@+id/lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:text="lock"
+        app:layout_constraintBottom_toTopOf="@id/track_text"
+        app:layout_constraintRight_toLeftOf="@id/go_drag" />
+
+    <com.example.myapp.uiview.ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.example.myapp.uiview.ShapeView
+        android:id="@+id/shape"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.example.myapp.uiview.RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.myapp.uiview.LetterView
+        android:id="@+id/letter"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textLetter"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/text_bg"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="#EF187D"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.myapp.uiview.LinearGradientView5
+        android:layout_margin="20dp"
+        android:layout_width="100dp"
+        android:layout_height="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
